@@ -116,7 +116,7 @@ To begin collecting data from Zabbix graphs periodically, follow these steps:
     |🏢 COMPANY_DOMAIN_NAME| Your Zabbix server domain name (e.g., monitoring.example.com or statistics.example.com).|
     |👤 USERNAME | Your Zabbix account username.|
     |🔒 PASSWORD | Your Zabbix account password.|
-    |🖼️ IMAGE_DIRECTORY | The path to the directory where you want to save the downloaded images (e.g., `./images` or `images` or `images/`).|
+    |🖼️ IMAGE_DIRECTORY | The path to the directory where you want to save the downloaded images (e.g., `./images` or `images` or `images/`), default is 'images'.|
     |🕒 REQUESTS_PER_HOUR | The number of requests per hour to make to the Zabbix server (e.g., if equals to 4, the requests will be sent every 15 min (as 60 min/4)).|
 
 ---
@@ -174,7 +174,7 @@ dataset
 
 To classify the images into the appropriate folders:
 
-- Move or copy the collected images into the appropriate folders based on their classification.
+- Move or copy the collected images from *IMAGE_DIRECTORY* into the appropriate folders based on their classification.
         
     - 📁Bottleneck images should be placed in the [bottleneck]() folders within the [training](./dataset/training/) and [testing](./dataset/testing/) directories.
         
