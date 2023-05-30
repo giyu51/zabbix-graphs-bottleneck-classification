@@ -167,7 +167,7 @@ dataset
     └── not_bottleneck
         └── [non-bottleneck images]
 ```
-> #### :warning: DO NOT change the any folder structure or folder names.
+> ### :warning: DO NOT change the any folder structure or folder names.
 
 
 To classify the images into the appropriate folders:
