@@ -1,6 +1,6 @@
 # :bar_chart: zabbix-graphs-bottleneck-recognition :mag_right:
 
-The :bar_chart: **zabbix-graphs-bottleneck-recognition** project aims to automate the identification and recognition of bottlenecks using graphs from Zabbix. :computer: By leveraging the Zabbix API, the project connects to the Zabbix server and downloads the graph images corresponding to specific item IDs. These graph images are then used to train a machine learning model for bottleneck recognition. :chart_with_upwards_trend:
+The :bar_chart:**zabbix-graphs-bottleneck-recognition** project aims to automate the identification and recognition of bottlenecks using graphs from Zabbix. :computer: By leveraging the Zabbix API, the project connects to the Zabbix server and downloads the graph images corresponding to specific item IDs. These graph images are then used to train a machine learning model for bottleneck recognition. :chart_with_upwards_trend:
 
 ## :sparkles: **Key Features**:
 
@@ -167,8 +167,8 @@ dataset
     └── not_bottleneck
         └── [non-bottleneck images]
 ```
-> :warning: It is not recommended to change the folder structure or folder names.
-> :warning: If you have customized the folder names, please indicate those names in the **[main.ipynb](./main.ipynb)** file in the "Process Configuration" section.
+> #### :warning: DO NOT change the any folder structure or folder names.
+
 
 To classify the images into the appropriate folders:
 
