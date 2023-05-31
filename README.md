@@ -22,7 +22,7 @@ This project serves as a practical solution for system administrators and IT pro
 
 To run this project, you need to have the following dependencies installed:
 
--   🐍 [Python](https://www.python.org/downloads/): Python is a programming language used by this project.
+-   🐍 [Python >= 3.8](https://www.python.org/downloads/): Python is a programming language used by this project.
 -   📦 [pip](https://pip.pypa.io/en/stable/): pip is the package installer for Python.
 -   🤖 [TensorFlow](https://www.tensorflow.org/): TensorFlow is a machine learning framework used for model training.
 -   🌐 [requests](https://pypi.org/project/requests/): requests is a Python library used for making HTTP requests.
@@ -209,7 +209,8 @@ By following these steps, you will be able to 🏋️‍♀️ run the training 
 
 In the **[main.ipynb](./main.ipynb)** file, you have the flexibility to customize various parameters to tailor the image classification and model training process according to your specific requirements. These parameters allow you to control aspects such as *directory paths*, *image settings*, *batch size*, *class names*, *training epochs*, and even the *model structure*.
 
-By adjusting these customization parameters, you can adapt the project to different datasets, image dimensions, training preferences, and even experiment with different model architectures. 
+
+By adjusting these parameters, you can adapt the project to different datasets, image dimensions, training preferences, and even experiment with different model architectures.
 
 ```python
 
