@@ -104,16 +104,16 @@ To begin collecting data from Zabbix graphs periodically, follow these steps:
 
 1. Configure the **[zabbix_conf.json](./zabbix_conf.json)** file:
 
-    In the **[zabbix_conf.json](./zabbix_conf.json)** file, specify the following parameters:
+    In the **[zabbix_conf.json](./zabbix_conf.json)** file in [*"Data Collection"*]() section, specify the following parameters:
 
     ```json
-    {
-        "COMPANY_DOMAIN_NAME": "example.com",
-        "USERNAME": "your_username",
-        "PASSWORD": "your_password",
-        "IMAGE_DIRECTORY": "path_to_save_images",
-        "REQUESTS_PER_HOUR": 4
-    }
+    "Data Collection": {
+        "COMPANY_DOMAIN_NAME": "",
+        "USERNAME": "",
+        "PASSWORD": "",
+        "IMAGE_DIRECTORY": "./images",
+        "REQUESTS_PER_HOUR": 1800
+    },
     ```
 
     Replace the values with your actual credentials and desired settings:
@@ -122,7 +122,7 @@ To begin collecting data from Zabbix graphs periodically, follow these steps:
     |🏢 COMPANY_DOMAIN_NAME| Your Zabbix server domain name (e.g., monitoring.example.com or statistics.example.com).|
     |👤 USERNAME | Your Zabbix account username.|
     |🔒 PASSWORD | Your Zabbix account password.|
-    |🖼️ IMAGE_DIRECTORY | The path to the directory where you want to save the downloaded images (e.g., `./images` or `screens` or `data/`), default is 'images'.|
+    |🖼️ IMAGE_DIRECTORY | The path to the directory where you want to save the downloaded images (e.g., `./images` or `screens` or `data/`), default is `./images`.|
     |🕒 REQUESTS_PER_HOUR | The number of requests per hour to make to the Zabbix server (e.g., if equals to 4, the requests will be sent every 15 min (as 60 min/4)).|
 
 ---
@@ -150,10 +150,11 @@ To begin collecting data from Zabbix graphs periodically, follow these steps:
 
 ---
 
-3. Run **[get_data.py](./get_data.py)** to start data collection:
-   <br>
+3. Run **[get_data.py](./get_data.py)** to start data collection by: 
 
-    On the server where you want to collect the Zabbix graph images, execute the get_data.py script. This script will connect to the Zabbix server, download the graph images based on the specified interfaces and item IDs, and save them to the specified directory.
+> python3 get_data.py
+
+On the server where you want to collect the Zabbix graph images, execute the get_data.py script. This script will connect to the Zabbix server, download the graph images based on the specified interfaces and item IDs, and save them to the specified directory.
 
 #### 2. 📷Image Classification and Folder Structuring
 By organizing the images into the specified folder structure, you will have separate directories for training and testing, with subfolders for bottleneck and non-bottleneck images. This structure will facilitate the subsequent steps of your project, such as model training and evaluation.
@@ -180,7 +181,7 @@ dataset
 
 To classify the images into the appropriate folders:
 
-- Move or copy the collected images from *IMAGE_DIRECTORY* into the appropriate folders based on their classification.
+- Move or copy the collected images from *IMAGE_DIRECTORY* (default is `./images`) into the appropriate folders based on their classification.
         
     - 📁Bottleneck images should be placed in the [bottleneck]() folders within the [training](./dataset/training/) and [testing](./dataset/testing/) directories.
         
@@ -190,15 +191,23 @@ To classify the images into the appropriate folders:
 :red_circle: Ensure that the images are correctly classified and placed in the respective folders according to their classification (bottleneck or non-bottleneck).
 
 #### 3. :rocket:Model Training
-To proceed with training the model, follow these steps:
+By following these steps, you will be able to 🏋️‍♀️ run the training process, 💾 save the trained model, and 📊 access relevant logs for reference.
 
+To initiate the model training process, you have **two options**:
+
+**1.** Execute **[main.py](main.py)**.
+This is the straightforward method; simply run the file and wait for the training to complete.
+
+OR
+
+**2.** If you prefer a more readable format for reviewing the code, follow these steps: 
 1. 📝Open the **[main.ipynb](./main.ipynb)** notebook.
 
 2. ▶️Run all the cells in the notebook by selecting *"Run All"* from the *"Run"* menu or by clicking the appropriate button in your notebook interface.
 
-3. ⏳If there are no errors during execution, the model training process will begin. As the training progresses, you will be able to monitor the logs and receive information about the overall process.
+⏳If there are no errors during execution, the model training process will begin. As the training progresses, you will be able to monitor the logs and receive information about the overall process.
 
-4. 💾Once the training is completed, the trained model will be automatically saved to the **MK-1** folder. You can locate the saved model in this folder.
+💾Once the training is completed, the trained model will be automatically saved to the **MK-1** folder. You can locate the saved model in this folder.
 
 📋 Additionally, detailed logs about the training process, as well as information about the overall process, can be found in the **[logs/zabbix_logs.json](./logs/zabbix_logs.json)** file. Default log directory is **[./logs](./logs/)**, however it can be changed (read about it in [customization section](#art-customization))
 
@@ -207,32 +216,28 @@ By following these steps, you will be able to 🏋️‍♀️ run the training 
 
 ## :art: Customization
 
-In the **[main.ipynb](./main.ipynb)** file, you have the flexibility to customize various parameters to tailor the image classification and model training process according to your specific requirements. These parameters allow you to control aspects such as *directory paths*, *image settings*, *batch size*, *class names*, *training epochs*, and even the *model structure*.
+In the **[zabbix_conf.json](./zabbix_conf.json)** file, in [*"Model Training"*]() section, you have the flexibility to customize various parameters to tailor the image classification and model training process according to your specific requirements. These parameters allow you to control aspects such as *directory paths*, *image settings*, *batch size*, *class names*, *training epochs*, and even the *model structure*.
 
 
 By adjusting these parameters, you can adapt the project to different datasets, image dimensions, training preferences, and even experiment with different model architectures.
 
-```python
+```json
 
-# Set the path to the main directory containing the training and testing folders
-main_dir = './dataset'
+"Model Training": {
 
-# Define the subdirectories
-train_dir = main_dir + '/training'
-test_dir = main_dir + '/testing'
-logs_dir = "./logs"
+        "main_dir": "./dataset",
+        "train_dir": "./dataset/training",
+        "test_dir": "./dataset/testing",
+        "logs_dir": "./logs",
 
-# Set the desired image settings
-image_width = 1450
-image_height = 291
-image_size = (image_width, image_height)
-resize_factor = 0.8  # Reduce photo size by 20%
-batch_size = 1
+        "image_width": 1450,
+        "image_height": 291,
+        "resize_factor": 0.8,
 
-# Specify the exact names of the two classes (two directories) located in both subdirectories
-class_names = ['bottleneck', 'non_bottleneck']
-epochs = 3
-
+        "batch_size": 16,
+        "class_names": [ "bottleneck", "non_bottleneck" ],
+        "epochs": 10
+    }
 
 ```
 
@@ -253,15 +258,29 @@ Feel free to modify these parameters based on your needs and preferences to achi
     + **batch_size**: Specifies the number of images to include in each training batch. Adjusting this parameter can impact the training speed and memory consumption.
 
 4. Class Names:
-    + **class_names**: Provides the exact names of the two classes (directories) present in both the training and testing subdirectories. Ensure that these names correspond correctly to your dataset.
+    + **class_names**: Provides the exact names of the two classes (directories) present in both the training and testing subdirectories. Ensure that these names correspond correctly to your dataset. (By default they are "bottleneck" and "non_bottleneck". It is NOT Recommended to change their names)
+
 5. Training Epochs:
     + **epochs**: Determines the number of training epochs, which represent the number of times the model will iterate over the entire training dataset.
 
 6. Model Structure:
 
     **model**: Represents the model architecture used for image classification. You can customize the model structure by adding, removing, or modifying layers. The provided model structure includes convolutional layers, pooling layers, a flattening layer, and dense layers with specific activation functions.
-## :page_with_curl: Code Description:
 
+## Examples:
+After succesfull training you can view newly created logs:
+A training plot image:
+> **logs / training_plot.png** :
+
+![example_training_plot.png](./example_training_plot.png)
+
+And an overall properties of the model:
+
+> **logs / zabbix_logs.json** :
+
+![example_zabbix_logs_json.png](./example_zabbix_logs_json.png)
+
+## :page_with_curl: Code Description:
 >Script **[get_data.py](./get_data.py)** : 📜
 
 This code is used to collect images from a Zabbix monitoring system. It connects to the Zabbix API, authenticates the user, and downloads images corresponding to specified item IDs. The collected images are saved to a specified directory.
@@ -288,17 +307,45 @@ This code can be used as a standalone script to automate the collection of image
 
 This code trains a machine learning model for image classification using TensorFlow and Keras. It follows the following steps:
 
-1. Imports the necessary libraries and modules, including TensorFlow, Keras, Matplotlib, and JSON.
-2. Sets the configuration parameters for the training and testing directories, image settings, batch size, class names, and number of epochs.
-3. Creates the training and testing datasets from the image directories.
-4. Normalizes and resizes the images in the datasets.
-5. Defines the model architecture using a sequential model with convolutional, pooling, flattening, and dense layers.
-6. Compiles the model by specifying the optimizer, loss function, and evaluation metrics.
-7. Trains the model on the training dataset for the specified number of epochs.
-8. Evaluates the model's performance on the testing dataset, calculating the loss and accuracy.
-9. Saves the training accuracy and loss values and creates a plot of the training progress.
-10. Saves the model and the training logs in separate files.
+This code is for training a convolutional neural network (CNN) model using TensorFlow and Keras. Here is a description of the code:
 
+1. The necessary libraries and modules are imported, including TensorFlow, Keras, Matplotlib, and JSON.
+
+2. Customization:
+   - The code reads a JSON configuration file named "zabbix_conf.json" and retrieves the required settings for model training from [*"Model Training"*]() section.
+   - The main directory, training directory, testing directory, logs directory, image dimensions, resize factor, batch size, class names, and number of epochs are defined based on the configuration file.
+   - Information about the chosen settings is printed to the console.
+
+3. Creating the datasets:
+   - The code creates the training and testing datasets using the `tf.keras.preprocessing.image_dataset_from_directory()` function.
+   - The datasets are set up with the appropriate settings, such as labels, color mode, batch size, and image size.
+   - The pixel values of the images in the datasets are normalized to a range of [0, 1] using the `map()` method.
+
+4. Image resizing:
+   - The code resizes the images in the datasets based on the specified resize factor using the `tf.image.resize()` function.
+
+5. Model creation:
+   - A sequential model is created using the `Sequential()` class from Keras.
+   - Convolutional, pooling, and dense layers are added to the model.
+   - The model is compiled with the Adam optimizer, binary cross-entropy loss function, and accuracy as the evaluation metric.
+
+6. Model training:
+   - The model is trained using the `fit()` method with the training dataset for the specified number of epochs and batch size.
+   - The training progress is stored in the `history` object.
+
+7. Model evaluation:
+   - The trained model is evaluated on the test dataset using the `evaluate()` method, and the testing loss and accuracy are obtained.
+
+8. Plotting the training progress:
+   - The training accuracy and loss values from the `history` object are plotted using Matplotlib.
+   - Two subplots are created for accuracy and loss, and the plots are saved as a figure in default log directory.
+
+9. Logging and saving:
+   - Various information and metrics, including timestamps, directory configurations, image settings, training configurations, and model performance, are stored in a dictionary called `logs`.
+   - The `logs` dictionary is written to a JSON file named "zabbix_logs.json" in the specified logs directory.
+   - The trained model is saved to a file named "MK-1" in the current directory.
+
+This code essentially sets up a CNN model, trains it on the provided datasets, evaluates its performance, saves the model, and logs relevant information about the training process.
 Overall, this script serves as a foundation for training and evaluating an image classification model using TensorFlow and Keras. With further customization and expansion, it can be adapted to various image classification tasks and integrated into larger machine learning projects.
 
 ## :raising_hand: Contributing
