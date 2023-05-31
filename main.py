@@ -107,10 +107,11 @@ model.add(Dense(1, activation='sigmoid'))
 
 
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
-
+print('Model is compiled')
 
 
 history = model.fit(train_dataset, epochs=epochs, batch_size=batch_size)
+print('Model is trained')
 
 
 # Evaluate the model on the test dataset
@@ -145,7 +146,6 @@ plt.tight_layout()
 
 # Save the figure
 plt.savefig(f'{logs_dir}/training_plot.png')
-
 
 
 logs = {
@@ -187,8 +187,12 @@ logs = {
 with open(f"{logs_dir}/zabbix_logs.json", "a") as json_file:
     json.dump(logs, json_file)
 
+print("Logs are saved")
+
 
 # Save model
 model.save('./MK-1')
+
+print('Model is saved')
 
 
