@@ -215,10 +215,10 @@ OR
 
 ## :art: Customization
 
-In the **[zabbix_conf.json](./zabbix_conf.json)** file, in [*"Model Training"*]() section, you have the flexibility to customize various parameters to tailor the image classification and model training process according to your specific requirements. These parameters allow you to control aspects such as *directory paths*, *image settings*, *batch size*, *class names*, *training epochs*, and even the *model structure*.
+In the **[zabbix_conf.json](./zabbix_conf.json)** file, in [*"Model Training"*]() section, you have the flexibility to customize various parameters to tailor the image classification and model training process according to your specific requirements. These parameters allow you to control aspects such as *directory paths*, *image settings*, *batch size*, *class names*, *training epochs*.
 
 
-By adjusting these parameters, you can adapt the project to different datasets, image dimensions, training preferences, and even experiment with different model architectures.
+By adjusting these parameters, you can adapt the project to different datasets, image dimensions, training preference.
 
 ```json
 
@@ -261,10 +261,6 @@ Feel free to modify these parameters based on your needs and preferences to achi
 
 5. Training Epochs:
     + **epochs**: Determines the number of training epochs, which represent the number of times the model will iterate over the entire training dataset.
-
-6. Model Structure:
-
-    **model**: Represents the model architecture used for image classification. You can customize the model structure by adding, removing, or modifying layers. The provided model structure includes convolutional layers, pooling layers, a flattening layer, and dense layers with specific activation functions.
 
 ## Examples:
 After succesfull training you can view newly created logs:
