@@ -2,6 +2,6 @@
     "COMPANY_DOMAIN_NAME": "",
     "USERNAME": "",
     "PASSWORD": "",
-    "IMAGE_DIRECTORY": "",
+    "IMAGE_DIRECTORY": "./images",
     "REQUESTS_PER_HOUR": 4
 }
