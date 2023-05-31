@@ -212,8 +212,6 @@ OR
 
 📋 Additionally, detailed logs about the training process, as well as information about the overall process, can be found in the **[logs/zabbix_logs.json](./logs/zabbix_logs.json)** file. Default log directory is **[./logs](./logs/)**, however it can be changed (read about it in [customization section](#art-customization))
 
-By following these steps, you will be able to 🏋️‍♀️ run the training process, 💾 save the trained model, and 📊 access relevant logs for reference.
-
 
 ## :art: Customization
 
