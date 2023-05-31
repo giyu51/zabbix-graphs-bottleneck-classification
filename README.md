@@ -93,6 +93,7 @@ pip3 install matplotlib
     pip install requests
     pip install matplotlib
 ```
+🛠️ Troubleshooting: If you encounter any errors during the installation process, it is recommended to refer to the official website for the installation manual specific to your system.  
 
 ## :hammer_and_wrench: Usage
 
