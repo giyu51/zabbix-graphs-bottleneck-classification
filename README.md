@@ -361,4 +361,4 @@ I would like to express my gratitude to the following libraries and frameworks f
 - TensorFlow: for providing powerful tools and resources for deep learning and neural network training.
 - Matplotlib: for enabling the visualization and plotting of data in a clear and intuitive manner.
 
-Their dedication to open-source development and continuous improvement has greatly facilitated the creation of this project
+Their dedication to open-source development and continuous improvement has greatly facilitated the creation of this project.
