@@ -272,13 +272,13 @@ After succesfull training you can view newly created logs:
 A training plot image:
 > **logs / training_plot.png** :
 
-![example_training_plot.png](./example_training_plot.png)
+![example_training_plot.png](./.example_files/example_training_plot.png)
 
 And an overall properties of the model:
 
 > **logs / zabbix_logs.json** :
 
-![example_zabbix_logs_json.png](./example_zabbix_logs_json.png)
+![example_zabbix_logs_json.png](./.example_files/example_zabbix_logs_json.png)
 
 ## :page_with_curl: Code Description:
 >Script **[get_data.py](./get_data.py)** : 📜
