@@ -1,7 +1,26 @@
 {
-    "COMPANY_DOMAIN_NAME": "",
-    "USERNAME": "",
-    "PASSWORD": "",
-    "IMAGE_DIRECTORY": "./images",
-    "REQUESTS_PER_HOUR": 4
+    "Data Collection": {
+        "COMPANY_DOMAIN_NAME": "",
+        "USERNAME": "",
+        "PASSWORD": "",
+        "IMAGE_DIRECTORY": "./images",
+        "REQUESTS_PER_HOUR": 1800
+    },
+
+    "Model Training": {
+
+        "main_dir": "./dataset",
+        "train_dir": "./dataset/training",
+        "test_dir": "./dataset/testing",
+        "logs_dir": "./logs",
+        "image_width": 1450,
+        "image_height": 291,
+        "resize_factor": 0.8,
+        "batch_size": 16,
+        "class_names": [
+            "bottleneck",
+            "non_bottleneck"
+        ],
+        "epochs": 10
+    }
 }
