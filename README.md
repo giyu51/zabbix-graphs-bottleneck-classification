@@ -339,6 +339,7 @@ This code is for training a convolutional neural network (CNN) model using Tenso
    - The trained model is saved to a file named "MK-1" in the current directory.
 
 This code essentially sets up a CNN model, trains it on the provided datasets, evaluates its performance, saves the model, and logs relevant information about the training process.
+
 Overall, this script serves as a foundation for training and evaluating an image classification model using TensorFlow and Keras. 
 
 ## :raising_hand: Contributing
