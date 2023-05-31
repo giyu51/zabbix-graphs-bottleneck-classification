@@ -42,6 +42,9 @@ sudo apt install python3
 # Install pip
 sudo apt install python3-pip
 
+# Update pip
+python3 -m pip install --upgrade pip
+
 # Install TensorFlow
 pip3 install tensorflow
 
@@ -63,6 +66,9 @@ sudo dnf install python3
 
 # Install pip
 sudo dnf install python3-pip
+
+# Update pip
+python3 -m pip install --upgrade pip
 
 # Install TensorFlow
 pip3 install tensorflow
