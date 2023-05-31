@@ -300,8 +300,6 @@ This code can be used as a standalone script to automate the collection of image
 > Script **[main.ipynb](./main.ipynb)** / **[main.py](./main.py)** : 📜
 
 
-This code trains a machine learning model for image classification using TensorFlow and Keras. It follows the following steps:
-
 This code is for training a convolutional neural network (CNN) model using TensorFlow and Keras. Here is a description of the code:
 
 1. The necessary libraries and modules are imported, including TensorFlow, Keras, Matplotlib, and JSON.
@@ -341,7 +339,7 @@ This code is for training a convolutional neural network (CNN) model using Tenso
    - The trained model is saved to a file named "MK-1" in the current directory.
 
 This code essentially sets up a CNN model, trains it on the provided datasets, evaluates its performance, saves the model, and logs relevant information about the training process.
-Overall, this script serves as a foundation for training and evaluating an image classification model using TensorFlow and Keras. With further customization and expansion, it can be adapted to various image classification tasks and integrated into larger machine learning projects.
+Overall, this script serves as a foundation for training and evaluating an image classification model using TensorFlow and Keras. 
 
 ## :raising_hand: Contributing
 
