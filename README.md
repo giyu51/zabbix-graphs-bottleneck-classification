@@ -1,4 +1,4 @@
-# :bar_chart: zabbix-graphs-bottleneck-classification :mag_right:
+# :bar_chart: Zabbix Graphs Bottleneck Classification :mag_right:
 
 The :bar_chart:**zabbix-graphs-bottleneck-classification** project aims to automate the identification and classification of bottlenecks using graphs from Zabbix. :computer: By leveraging the Zabbix API, the project connects to the Zabbix server and downloads the graph images corresponding to specific item IDs. These graph images are then used to train a machine learning model for bottleneck classification. :chart_with_upwards_trend:
 
