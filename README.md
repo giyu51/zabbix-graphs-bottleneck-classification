@@ -1,14 +1,14 @@
-# :bar_chart: zabbix-graphs-bottleneck-recognition :mag_right:
+# :bar_chart: zabbix-graphs-bottleneck-classification :mag_right:
 
-The :bar_chart:**zabbix-graphs-bottleneck-recognition** project aims to automate the identification and recognition of bottlenecks using graphs from Zabbix. :computer: By leveraging the Zabbix API, the project connects to the Zabbix server and downloads the graph images corresponding to specific item IDs. These graph images are then used to train a machine learning model for bottleneck recognition. :chart_with_upwards_trend:
+The :bar_chart:**zabbix-graphs-bottleneck-classification** project aims to automate the identification and classification of bottlenecks using graphs from Zabbix. :computer: By leveraging the Zabbix API, the project connects to the Zabbix server and downloads the graph images corresponding to specific item IDs. These graph images are then used to train a machine learning model for bottleneck classification. :chart_with_upwards_trend:
 
 ## :sparkles: **Key Features**:
 
 -   :gear: Zabbix Integration: Connects to the Zabbix server using API authentication to access the required graph images.
 -   :camera: Graph Image Extraction: Downloads graph images from Zabbix based on the provided item IDs.
 -   :robot: Machine Learning Model Training: Utilizes TensorFlow to train a deep learning model using the downloaded graph images.
--   :mag: Bottleneck Recognition: Applies the trained model to identify and recognize bottlenecks in the system.
--   :rocket: Automation and Efficiency: Automates the process of obtaining graph images and performing bottleneck recognition, enabling efficient monitoring and analysis.
+-   :mag: Bottleneck Classification: Applies the trained model to identify and classify bottlenecks in the system.
+-   :rocket: Automation and Efficiency: Automates the process of obtaining graph images and performing bottleneck classification, enabling efficient monitoring and analysis.
 
 This project serves as a practical solution for system administrators and IT professionals to proactively identify and address bottlenecks in their infrastructure using Zabbix's monitoring capabilities and machine learning techniques.
 
