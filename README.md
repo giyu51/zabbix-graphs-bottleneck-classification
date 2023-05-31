@@ -281,7 +281,7 @@ And an overall properties of the model:
 ![/.example_files/example_zabbix_logs_json.png](./.example_files/example_zabbix_logs_json.png)
 
 ## :page_with_curl: Code Description:
->Script **[get_data.py](./get_data.py)** : 📜
+> Script **[get_data.py](./get_data.py)** : 📜
 
 This code is used to collect images from a Zabbix monitoring system. It connects to the Zabbix API, authenticates the user, and downloads images corresponding to specified item IDs. The collected images are saved to a specified directory.
 
@@ -302,7 +302,7 @@ Here is a breakdown of the code:
 This code can be used as a standalone script to automate the collection of images from a Zabbix monitoring system at regular intervals. It can be further modified to add additional functionalities or integrated into a larger project.
 
 ---
->Script **[main.ipynb](./main.ipynb)** : 📜
+> Script **[main.ipynb](./main.ipynb)** / **[main.py](./main.py)** : 📜
 
 
 This code trains a machine learning model for image classification using TensorFlow and Keras. It follows the following steps:
