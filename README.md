@@ -269,7 +269,7 @@ A training plot image:
 
 ![/.example_files/example_training_plot.png](./.example_files/example_training_plot.png)
 
-And an overall properties of the model:
+And overall properties of the model:
 
 > **logs / zabbix_logs.json** :
 
