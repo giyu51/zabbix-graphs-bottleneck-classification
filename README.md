@@ -163,7 +163,7 @@ To begin collecting data from Zabbix graphs periodically, follow these steps:
 
 > python3 get_data.py
 
-On the server where you want to collect the Zabbix graph images, execute the get_data.py script. This script will connect to the Zabbix server, download the graph images based on the specified interfaces and item IDs, and save them to the specified directory.
+On the server where you want to collect the Zabbix graph images, execute the **[get_data.py](./get_data.py)** script. This script will connect to the Zabbix server, download the graph images based on the specified interfaces and item IDs, and save them to the specified directory.
 
 #### 2. 📷Image Classification and Folder Structuring
 By organizing the images into the specified folder structure, you will have separate directories for training and testing, with subfolders for bottleneck and non-bottleneck images. This structure will facilitate the subsequent steps of your project, such as model training and evaluation.
