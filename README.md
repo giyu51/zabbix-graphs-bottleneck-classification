@@ -361,5 +361,6 @@ This project is licensed under the MIT License 📜.
 I would like to express my gratitude to the following libraries and frameworks for their valuable contributions to this project:
 - TensorFlow: for providing powerful tools and resources for deep learning and neural network training.
 - Matplotlib: for enabling the visualization and plotting of data in a clear and intuitive manner.
+- Keras: for its user-friendly and efficient interface to build and train deep learning models. Its seamless integration with TensorFlow has greatly simplified the development process and allowed for rapid experimentation and prototyping.
 
 Their dedication to open-source development and continuous improvement has greatly facilitated the creation of this project.
