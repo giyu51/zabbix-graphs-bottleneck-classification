@@ -218,7 +218,7 @@ OR
 
 💾Once the training is completed, the trained model will be automatically saved to the **MK-1** folder. You can locate the saved model in this folder.
 
-📋 Additionally, detailed logs about the training process, as well as information about the overall process, can be found in the **[logs/zabbix_logs.json](./logs/zabbix_logs.json)** file. Default log directory is **[./logs](./logs/)**, however it can be changed (read about it in [customization section](#art-customization))
+📋 Additionally, detailed logs about the training process, as well as information about the overall process, can be found in the **[logs/zabbix_logs.json](./logs/zabbix_logs.json)** file. Default log directory is **[./logs/](./logs/)**, however it can be changed (read about it in [customization section](#art-customization))
 
 
 ## :art: Customization
