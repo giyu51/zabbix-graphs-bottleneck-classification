@@ -53,6 +53,9 @@ pip3 install requests
 
 # Install matplotlib
 pip3 install matplotlib
+
+# Clone the repository to your directory
+git clone <repository>
 ```
 
 ##### RPM-based (e.g., Fedora, CentOS, Red Hat Enterprise Linux):
@@ -78,6 +81,9 @@ pip3 install requests
 
 # Install matplotlib
 pip3 install matplotlib
+
+# Clone the repository to your directory
+git clone <repository>
 ```
 
 ##### Windows
@@ -93,11 +99,15 @@ pip3 install matplotlib
     pip install requests
     pip install matplotlib
 ```
+4. Clone the repository to your directory
+```shell
+    git clone <repository>
+```
 🛠️ ⚠️ Troubleshooting: If you encounter any errors during the installation process, it is recommended to refer to the official website for the installation manual specific to your system.  
 
 ## :hammer_and_wrench: Usage
 
-Clone the project to your folder.
+#### Clone the project to your folder.
 
 #### 1. 📊 Zabbix Graphs Data Collection
 
