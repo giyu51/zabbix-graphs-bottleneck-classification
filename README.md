@@ -107,8 +107,6 @@ git clone <repository>
 
 ## :hammer_and_wrench: Usage
 
-#### Clone the project to your folder.
-
 #### 1. 📊 Zabbix Graphs Data Collection
 
 To begin collecting data from Zabbix graphs periodically, follow these steps:
